@@ -5,19 +5,16 @@ import Searchbar from './searchbar';
 console.log('react app loaded!');
 
 class App extends React.Component {
+    displayName(name) {
+        return (<p>{name}</p>);
+    }
+
     render() {
-
-        const displayName = (name) => {
-            return (<p>{name}</p>);
-        }
-
-        const userName = displayName('Brian');
-
         return (
             <div>
                 <h1>React App Loaded!</h1>
                 <p>Good work!</p>
-                {userName}
+                {this.displayName('Brian')}
                 <Searchbar />
             </div>
         );
