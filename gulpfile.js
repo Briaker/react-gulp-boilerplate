@@ -53,7 +53,7 @@ gulp.task('es6', () => {
 gulp.task('watch', () => {
     gulp.watch('./src/assets/styles/**/*.scss', ['styles']);
     gulp.watch('./src/app.js', ['es6']);
-    gulp.watch('./dist/*.html', reload);
+    gulp.watch('./src/*.html', ['html']);
 });
 
 gulp.task('build', ['html', 'styles', 'es6']);
