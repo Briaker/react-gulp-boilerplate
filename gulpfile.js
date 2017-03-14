@@ -35,8 +35,9 @@ gulp.task('styles', () => {
 });
 
 gulp.task('es6', () => {
-    return browserify('./src/app.js')
+    return browserify('./src/app.js', { debug: true })
     .transform('babelify', {
+        sourceMaps: true,
         presets: ['es2015', 'react']
     })
     .bundle()
